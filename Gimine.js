@@ -14,16 +14,21 @@ class Gimine {
         for (let i = 0; i < this.list.length; i++) {
             const person = this.list[i];
             let statusas = '';
-            if (person.married === true) {
-                statusas = 'yra';
+            if (person.gender) {  // ei gender yra true (visada true by default)
+                //statusas = person.married ? 'istekejusi' : 'neistekejusi';
+                // arba
+                statusas = (person.married ? '' : 'ne') + 'istekejusi';
             } else {
-                statusas = 'nera';
+                //statusas = person.married ? 'vedes' : 'nevedes';
+                // arba
+                statusas = (person.married ? '' : 'ne') + 'vedes';
             }
             /*  // ARBA
             if (person.married) {
                 statusas = 'yra';
             */
-            console.log(`${i + 1}. ${person.name} gime ${person.year} ir ${statusas} vedes.`);
+
+            console.log(`${i + 1}. ${person.name} gime ${person.year} metais ir yra ${statusas}`);
         }
         console.log('------------------');
     }
@@ -42,17 +47,16 @@ class Gimine {
         const updatedList = [];
 
         for (let i = 0; i < this.list.length; i++) {
-            if (i !== index) {
+            if (i !== index) {  //jei mano asmuo nesutampa su tuo, kuris mire, tada
                 updatedList.push(this.list[i]);
             }
         }
-        this.list = updatedList;
+        this.list = updatedList; //perrasau LIST reiksme (overwrite)
 
         console.log('------------------');
     }
     skyrybos(index) {
         this.list[index].married = false;
-
     }
 }
 

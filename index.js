@@ -4,9 +4,9 @@ const bajorai = new Gimine();
 
 console.log(bajorai); // gimines sarasas
 
-bajorai.gime({ name: 'Augustas', year: 2000 });
-bajorai.gime({ name: 'Barbora', year: 1998 });
-bajorai.gime({ name: 'Jogaila', year: 1985 });
+bajorai.gime({ name: 'Augustas', year: 2000, gender: false });
+bajorai.gime({ name: 'Barbora', year: 1998, gender: true });
+bajorai.gime({ name: 'Jogaila', year: 1985, gender: false });
 
 console.log(bajorai); // gimines sarasas
 
