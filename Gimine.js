@@ -19,6 +19,10 @@ class Gimine {
             } else {
                 statusas = 'nera';
             }
+            /*  // ARBA
+            if (person.married) {
+                statusas = 'yra';
+            */
             console.log(`${i + 1}. ${person.name} gime ${person.year} ir ${statusas} vedes.`);
         }
         console.log('------------------');
