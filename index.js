@@ -2,8 +2,12 @@ const Gimine = require('./Gimine.js');
 
 const bajorai = new Gimine();
 
+console.log(bajorai); // gimines sarasas
+
 bajorai.gime({ name: 'Augustas', year: 2000 });
 bajorai.gime({ name: 'Barbora', year: 1998 });
+
+console.log(bajorai); // gimines sarasas
 
 bajorai.giminesMedis();
 // 1. Augustas gime 2000 metais ir nera vedes.
